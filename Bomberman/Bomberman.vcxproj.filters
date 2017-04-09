@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="timer.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ressourcesmanager.cpp">
+      <Filter>Ressources</Filter>
+    </ClCompile>
+    <ClCompile Include="uiobject.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="label.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="uifactory.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="gamewindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="mainmenustate.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="option.cpp">
+      <Filter>Options</Filter>
+    </ClCompile>
+    <ClCompile Include="profile.cpp">
+      <Filter>Options</Filter>
+    </ClCompile>
+    <ClCompile Include="optionstate.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="profileloader.cpp">
+      <Filter>Options</Filter>
+    </ClCompile>
+    <ClCompile Include="firstgamestate.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="edittext.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="profilestate.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="editorstate.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="tile.cpp">
+      <Filter>DataModel\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>DataModel\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="maploader.cpp">
+      <Filter>DataModel\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="gameobject.cpp">
+      <Filter>DataModel\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>DataModel\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="newgamestate.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="bomb.cpp">
+      <Filter>DataModel\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="fire.cpp">
+      <Filter>Ressources\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="powerup.cpp">
+      <Filter>DataModel\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="aistrategie.cpp">
+      <Filter>DataModel\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="aicrazy.cpp">
+      <Filter>DataModel\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="aioffensive.cpp">
+      <Filter>DataModel\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="aidefensive.cpp">
+      <Filter>DataModel\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreloader.cpp">
+      <Filter>DataModel\Score</Filter>
+    </ClCompile>
+    <ClCompile Include="scorestate.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Boost">
+      <UniqueIdentifier>{bf745506-870a-4207-b17f-677b74acec9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{d1d3bcda-71db-44b2-aed8-024c2a4c412d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressources">
+      <UniqueIdentifier>{6d8e555d-eaca-4f78-ae2d-414658908dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{9ed37501-9aa1-4fd7-a402-099adb0985c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{cbdb71c2-d98e-490d-8884-422c164e1fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{5da6a59e-5881-41ba-9977-67f89dd458d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Options">
+      <UniqueIdentifier>{b1420839-4855-4f5a-b5ab-3f6c861d1626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataModel">
+      <UniqueIdentifier>{c7b51d27-0dfb-4a4a-b57e-1b796146d8fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataModel\Map">
+      <UniqueIdentifier>{2a8cdae7-5ce5-48b0-9d54-fa3fda5b5eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataModel\GameObject">
+      <UniqueIdentifier>{e6b35590-c32b-4dfa-aaf5-4469a030d812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressources\Effect">
+      <UniqueIdentifier>{57244b51-6b23-44ab-9b51-42a6a49bff2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataModel\AI">
+      <UniqueIdentifier>{e8a16a5b-2181-40ea-bf8b-8e1d92e91887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataModel\Score">
+      <UniqueIdentifier>{42a44600-b690-41ee-8fd0-2e1263da042b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="serial_multi_array.h">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ressourcesmanager.h">
+      <Filter>Ressources</Filter>
+    </ClInclude>
+    <ClInclude Include="uiobject.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="label.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="uifactory.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="gamewindow.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="mainmenustate.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="option.h">
+      <Filter>Options</Filter>
+    </ClInclude>
+    <ClInclude Include="profile.h">
+      <Filter>Options</Filter>
+    </ClInclude>
+    <ClInclude Include="optionstate.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="profileloader.h">
+      <Filter>Options</Filter>
+    </ClInclude>
+    <ClInclude Include="firstgamestate.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="edittext.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="profilestate.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="editorstate.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="tile.h">
+      <Filter>DataModel\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
+      <Filter>DataModel\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="maploader.h">
+      <Filter>DataModel\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject.h">
+      <Filter>DataModel\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>DataModel\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="newgamestate.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="bomb.h">
+      <Filter>DataModel\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="fire.h">
+      <Filter>Ressources\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="powerup.h">
+      <Filter>DataModel\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="aistrategie.h">
+      <Filter>DataModel\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="aicrazy.h">
+      <Filter>DataModel\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="aioffensive.h">
+      <Filter>DataModel\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="aidefensive.h">
+      <Filter>DataModel\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreloader.h">
+      <Filter>DataModel\Score</Filter>
+    </ClInclude>
+    <ClInclude Include="scorestate.h">
+      <Filter>States</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

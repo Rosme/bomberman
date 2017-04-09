@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aicrazy.cpp" />
+    <ClCompile Include="aidefensive.cpp" />
+    <ClCompile Include="aioffensive.cpp" />
+    <ClCompile Include="aistrategie.cpp" />
+    <ClCompile Include="bomb.cpp" />
+    <ClCompile Include="button.cpp" />
+    <ClCompile Include="editorstate.cpp" />
+    <ClCompile Include="edittext.cpp" />
+    <ClCompile Include="fire.cpp" />
+    <ClCompile Include="firstgamestate.cpp" />
+    <ClCompile Include="gameobject.cpp" />
+    <ClCompile Include="gamewindow.cpp" />
+    <ClCompile Include="label.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainmenustate.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="maploader.cpp" />
+    <ClCompile Include="newgamestate.cpp" />
+    <ClCompile Include="option.cpp" />
+    <ClCompile Include="optionstate.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="powerup.cpp" />
+    <ClCompile Include="profile.cpp" />
+    <ClCompile Include="profileloader.cpp" />
+    <ClCompile Include="profilestate.cpp" />
+    <ClCompile Include="ressourcesmanager.cpp" />
+    <ClCompile Include="scoreloader.cpp" />
+    <ClCompile Include="scorestate.cpp" />
+    <ClCompile Include="state.cpp" />
+    <ClCompile Include="tile.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="uifactory.cpp" />
+    <ClCompile Include="uiobject.cpp" />
+    <ClCompile Include="utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aicrazy.h" />
+    <ClInclude Include="aidefensive.h" />
+    <ClInclude Include="aioffensive.h" />
+    <ClInclude Include="aistrategie.h" />
+    <ClInclude Include="bomb.h" />
+    <ClInclude Include="button.h" />
+    <ClInclude Include="editorstate.h" />
+    <ClInclude Include="edittext.h" />
+    <ClInclude Include="fire.h" />
+    <ClInclude Include="firstgamestate.h" />
+    <ClInclude Include="gameobject.h" />
+    <ClInclude Include="gamewindow.h" />
+    <ClInclude Include="label.h" />
+    <ClInclude Include="mainmenustate.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="maploader.h" />
+    <ClInclude Include="newgamestate.h" />
+    <ClInclude Include="option.h" />
+    <ClInclude Include="optionstate.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="powerup.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="profileloader.h" />
+    <ClInclude Include="profilestate.h" />
+    <ClInclude Include="ressourcesmanager.h" />
+    <ClInclude Include="scoreloader.h" />
+    <ClInclude Include="scorestate.h" />
+    <ClInclude Include="serial_multi_array.h" />
+    <ClInclude Include="state.h" />
+    <ClInclude Include="tile.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="ui.h" />
+    <ClInclude Include="uifactory.h" />
+    <ClInclude Include="uiobject.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3610C694-3371-4D9B-8DCC-86C29D5CFDF7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Bomberman</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <TargetName>$(ProjectName)-d</TargetName>
+    <IncludePath>$(SolutionDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <IncludePath>$(SolutionDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(SolutionDir)assets" "$(SolutionDir)\bin\assets\" /E /Y
+xcopy "$(SolutionDir)dll" "$(SolutionDir)\bin" /E /Y
+xcopy "$(SolutionDir)map" "$(SolutionDir)\bin\map\" /E /Y</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-system.lib;sfml-window.lib;sfml-graphics.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(SolutionDir)assets" "$(SolutionDir)\bin\assets\" /E /Y
+xcopy "$(SolutionDir)dll" "$(SolutionDir)\bin" /E /Y
+xcopy "$(SolutionDir)map" "$(SolutionDir)\bin\map\" /E /Y</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
