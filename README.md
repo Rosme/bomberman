@@ -42,3 +42,7 @@ What may or may not be done:
 * Update SFML Version
 * Removal of Boost and replacing with equivalent
 
+Gameplay\
+![](https://i.imgur.com/322GcJi.png)\
+Map Editor\
+![](https://i.imgur.com/S3SFf7g.png)
