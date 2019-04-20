@@ -34,8 +34,8 @@ namespace DataModel {
 			Indestructible = (1<<3)
 		};
 	private:
-		sf::Sprite m_sprite;
 		sf::Vector2i m_mapPosition;
+		sf::Sprite m_sprite;
 		Property m_properties;
 		Type m_type;
 

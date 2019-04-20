@@ -6,7 +6,7 @@
 namespace DataModel {
 
 	AIDefensive::AIDefensive()
-		: AIStrategie(), m_decisionTimer(sf::milliseconds(DECISION_LIMIT), true), m_changePathTimer(sf::milliseconds(100), true) {}
+		: AIStrategie(), m_changePathTimer(sf::milliseconds(100), true), m_decisionTimer(sf::milliseconds(DECISION_LIMIT), true) {}
 
 	sf::Vector2i AIDefensive::findBestPosition(DataModel::Map& map, sf::Vector2i ownPos, sf::Vector2i runPos) {
 		sf::Vector2i bestPosition(-1, -1);

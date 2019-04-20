@@ -67,7 +67,7 @@ TODO:
 #include <ctime>
 
 # if defined( BOOST_CHRONO_POSIX_API )
-#   if ! defined(CLOCK_REALTIME)
+#   if ! defined(CLOCK_REALTIME) && ! defined (__hpux__)
 #     error <time.h> does not supply CLOCK_REALTIME
 #   endif
 # endif
@@ -96,9 +96,9 @@ namespace boost {
 namespace chrono {
 
   // Clocks
-  class BOOST_CHRONO_DECL system_clock;
+  class system_clock;
 #ifdef BOOST_CHRONO_HAS_CLOCK_STEADY
-  class BOOST_CHRONO_DECL steady_clock;
+  class steady_clock;
 #endif
 
 #ifdef BOOST_CHRONO_HAS_CLOCK_STEADY

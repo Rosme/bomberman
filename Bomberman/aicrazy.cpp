@@ -5,8 +5,10 @@ namespace DataModel {
 
 	AICrazy::AICrazy()
 		: AIStrategie(),
-		  m_gen(static_cast<unsigned int>(time(nullptr))),
-		  m_decisionTimer(sf::milliseconds(DECISION_LIMIT), true) {
+		m_currentDecision(Decision::MoveUp),
+		m_decisionTimer(sf::milliseconds(DECISION_LIMIT), true),
+		  m_gen(static_cast<unsigned int>(time(nullptr)))
+		   {
 		m_decisions[0] = AICrazy::MoveUp;
 		m_decisions[1] = AICrazy::MoveDown;
 		m_decisions[2] = AICrazy::MoveLeft;

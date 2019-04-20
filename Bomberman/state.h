@@ -27,8 +27,8 @@ namespace States {
 
 	class State {
 	protected:
-		UIObjects m_uiObjects;
 		GameWindow& m_gameWindow;
+		UIObjects m_uiObjects;
 	public:
 		/* Ctor */
 		State(GameWindow& gameWindow);

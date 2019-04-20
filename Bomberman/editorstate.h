@@ -17,24 +17,30 @@ namespace States {
 			Save,
 			Load
 		};
-		sf::RenderTexture m_mapTexture,
-						  m_headerTexture,
-						  m_newMapTexture,
-						  m_loadMapTexture;
 		sf::RectangleShape m_seperator;
-		sf::Sprite m_mapSprite,
-				   m_headerSprite,
-				   m_newMapSprite,
-				   m_loadMapSprite;
-		States::UIObjects m_newMapObjects;
-		States::UIObjects m_loadMapObjects;
-		EditTextptr m_mapNameEdit;
 		DataModel::Map m_map;
 		boost::shared_ptr<Ressources::Manager> m_ressources;
 		DataModel::Tile::Type m_currentTile;
-		bool m_mouseDownOnMap;
 		DataModel::MapLoader& m_mapLoader;
 		Substate m_currentSubstate;
+
+		sf::RenderTexture m_mapTexture;
+		sf::RenderTexture m_headerTexture;
+		sf::RenderTexture m_newMapTexture;
+		sf::RenderTexture m_loadMapTexture;
+		
+		sf::Sprite m_mapSprite;
+		sf::Sprite m_headerSprite;
+		sf::Sprite m_newMapSprite;
+		sf::Sprite m_loadMapSprite;
+
+		States::UIObjects m_newMapObjects;
+		States::UIObjects m_loadMapObjects;
+		EditTextptr m_mapNameEdit;
+		
+		
+		bool m_mouseDownOnMap;
+		
 		std::vector<sf::Sprite> m_playersSprite;
 		std::vector<sf::Sprite> m_tileSprite;
 		std::pair<bool, int> m_playerChose;

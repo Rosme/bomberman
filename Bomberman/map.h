@@ -34,12 +34,12 @@ namespace DataModel {
 	private:
 		typedef boost::multi_array<Tile, 2> MapArray;
 		MapArray m_array;
-		std::string m_name;
 		boost::shared_ptr<Ressources::Manager> m_ressources;
-		DataModel::Player m_player1,
-						  m_player2,
-						  m_player3,
-						  m_player4;
+		DataModel::Player m_player1;
+		DataModel::Player m_player2;
+		DataModel::Player m_player3;
+		DataModel::Player m_player4;
+		std::string m_name;
 		std::vector<DataModel::Player*> m_players;
 		std::vector<DataModel::BombPtr> m_bombs;
 		std::vector<DataModel::PowerUpPtr> m_powerUps;

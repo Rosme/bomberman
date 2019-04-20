@@ -17,15 +17,15 @@ namespace UI {
 			AlphaNum
 		};
 	private:
+		bool m_fullFocus;
 		sf::Text m_text;
 		sf::Color m_stdColor;
 		sf::Color m_focusColor;
-		bool m_fullFocus;
-		boost::signal<void(sf::Keyboard::Key)> m_textSignal;
-		bool m_takeFocus;
 		unsigned int m_inputLimit;
 		unsigned int m_currentCount;
+		bool m_takeFocus;
 		KeyFilter m_filter;
+		boost::signals2::signal<void(sf::Keyboard::Key)> m_textSignal;
 
 		/* Ctor */
 		EditText(float x, float y, const sf::Font& font, const sf::Color color, unsigned int size = 30);

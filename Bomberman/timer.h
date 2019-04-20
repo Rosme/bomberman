@@ -9,9 +9,9 @@ namespace Utils {
 	class Watch {
 	private:
 		/* Members */
-		sf::Clock m_clock;
 		sf::Time m_buffer;
 		bool m_running;
+		sf::Clock m_clock;
 	public:
 		/* Methods */
 		Watch(bool running = false);

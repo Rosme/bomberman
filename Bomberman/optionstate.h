@@ -9,6 +9,7 @@ namespace States {
 
 	class OptionState : public States::State {
 	private:
+		Options::Loader& m_profileLoader;
 		Labelptr m_musicLabel,
 				 m_soundLabel;
 		EditTextptr m_upEdit,
@@ -17,7 +18,6 @@ namespace States {
 					m_rightEdit,
 					m_pauseEdit,
 					m_bombEdit;
-		Options::Loader& m_profileLoader;
 
 		void lowerMusic(); //Less music
 		void lowerSound(); //Less sound

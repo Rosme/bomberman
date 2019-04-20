@@ -23,7 +23,7 @@ namespace UI {
 		m_focus = focus;
 	}
 
-	void Object::connect(sf::Event::EventType type, boost::signal<void()>::slot_function_type slot) {
+	void Object::connect(sf::Event::EventType type, boost::signals2::signal<void()>::slot_function_type slot) {
 		m_eventType = type;
 		m_signal.connect(slot);
 	}

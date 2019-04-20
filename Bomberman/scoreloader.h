@@ -18,8 +18,9 @@ namespace DataModel {
 			}
 		};
 
+		std::string m_filePath;
 		 ScoreArray m_scores;
-		 std::string m_filePath;
+		 
 
 		 void saveScores();
 	public:

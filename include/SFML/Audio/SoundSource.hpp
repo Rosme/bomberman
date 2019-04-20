@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2012 Laurent Gomila (laurent.gom@gmail.com)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -29,6 +29,7 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #include <SFML/Audio/Export.hpp>
+#include <SFML/Audio/AlResource.hpp>
 #include <SFML/System/Vector3.hpp>
 
 
@@ -38,9 +39,9 @@ namespace sf
 /// \brief Base class defining a sound's properties
 ///
 ////////////////////////////////////////////////////////////
-class SFML_AUDIO_API SoundSource
+class SFML_AUDIO_API SoundSource : AlResource
 {
-public :
+public:
 
     ////////////////////////////////////////////////////////////
     /// \brief Enumeration of the sound source states
@@ -130,7 +131,7 @@ public :
     /// \brief Make the sound's position relative to the listener or absolute
     ///
     /// Making a sound relative to the listener will ensure that it will always
-    /// be played the same way regardless the position of the listener.
+    /// be played the same way regardless of the position of the listener.
     /// This can be useful for non-spatialized sounds, sounds that are
     /// produced by the listener, or sounds attached to it.
     /// The default value is false (position is absolute).
@@ -239,15 +240,50 @@ public :
     ////////////////////////////////////////////////////////////
     float getAttenuation() const;
 
-protected :
+    ////////////////////////////////////////////////////////////
+    /// \brief Overload of assignment operator
+    ///
+    /// \param right Instance to assign
+    ///
+    /// \return Reference to self
+    ///
+    ////////////////////////////////////////////////////////////
+    SoundSource& operator =(const SoundSource& right);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Default constructor
+    /// \brief Start or resume playing the sound source
     ///
-    /// This constructor is meant ot be called by derived classes only.
+    /// This function starts the source if it was stopped, resumes
+    /// it if it was paused, and restarts it from the beginning if
+    /// it was already playing.
+    ///
+    /// \see pause, stop
     ///
     ////////////////////////////////////////////////////////////
-    SoundSource();
+    virtual void play() = 0;
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Pause the sound source
+    ///
+    /// This function pauses the source if it was playing,
+    /// otherwise (source already paused or stopped) it has no effect.
+    ///
+    /// \see play, stop
+    ///
+    ////////////////////////////////////////////////////////////
+    virtual void pause() = 0;
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Stop playing the sound source
+    ///
+    /// This function stops the source if it was playing or paused,
+    /// and does nothing if it was already stopped.
+    /// It also resets the playing position (unlike pause()).
+    ///
+    /// \see play, pause
+    ///
+    ////////////////////////////////////////////////////////////
+    virtual void stop() = 0;
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the current status of the sound (stopped, paused, playing)
@@ -255,7 +291,17 @@ protected :
     /// \return Current status of the sound
     ///
     ////////////////////////////////////////////////////////////
-    Status getStatus() const;
+    virtual Status getStatus() const;
+
+protected:
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Default constructor
+    ///
+    /// This constructor is meant to be called by derived classes only.
+    ///
+    ////////////////////////////////////////////////////////////
+    SoundSource();
 
     ////////////////////////////////////////////////////////////
     // Member data

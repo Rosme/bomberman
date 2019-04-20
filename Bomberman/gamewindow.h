@@ -19,10 +19,6 @@ private:
 	typedef std::unordered_map<States::GameState, boost::shared_ptr<States::State>> GameStates;
 
 	sf::RenderWindow& m_renderWindow;
-	sf::RenderTexture m_renderTexture;
-	sf::Sprite m_renderSprite;
-	sf::RectangleShape m_screenClearer;
-	GameStates m_gameStates;
 	States::GameState m_currentStateCode;
 	Stateptr m_currentState;
 	boost::shared_ptr<Ressources::Manager> m_ressources;
@@ -30,13 +26,20 @@ private:
 	DataModel::MapLoader m_mapLoader;
 	DataModel::ScoreLoader m_scoreLoader;
 
-	/* Methods */
-	void loadFirstGame(); //Load the first game state for first time
-	void loadGameStates(); //Load all the game state
 public:
 	const unsigned int WIDTH;
 	const unsigned int HEIGHT;
 
+private:
+	sf::RenderTexture m_renderTexture;
+	sf::Sprite m_renderSprite;
+	sf::RectangleShape m_screenClearer;
+	GameStates m_gameStates;
+
+	/* Methods */
+	void loadFirstGame(); //Load the first game state for first time
+	void loadGameStates(); //Load all the game state
+public:
 	/* Ctor */
 	GameWindow(sf::RenderWindow& renderWindow);
 

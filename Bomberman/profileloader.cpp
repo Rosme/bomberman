@@ -1,14 +1,16 @@
 #include <fstream>
+#include <iostream>
 #include <boost/filesystem.hpp>
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/archive/xml_oarchive.hpp>
 #include "profileloader.h"
 #include "utils.h"
+#include <sfml/System/Err.hpp>
 
 namespace Options {
 	namespace bfs = boost::filesystem;
 	Loader::Loader(const std::string& profilePath)
-		: m_profilePath(profilePath), m_firstgame(false) {
+		: m_currentProfileIndex(0), m_profilePath(profilePath), m_firstgame(false) {
 			bfs::path path(m_profilePath);
 
 			//Creating directory if it doesn't exist
@@ -29,11 +31,17 @@ namespace Options {
 			if((*it).path().extension().string() == ".plr") {
 				profileFile.open((*it).path().string());
 
-				boost::archive::xml_iarchive ia(profileFile);
-				Options::Profile profile("useless");
-				ia >> BOOST_SERIALIZATION_NVP(profile);
-				m_profileList.push_back(profile);
-
+				try {
+					boost::archive::xml_iarchive ia(profileFile);
+					Options::Profile profile("useless");
+					ia >> BOOST_SERIALIZATION_NVP(profile);
+					m_profileList.push_back(profile);
+					//profileFile.close();
+					break;
+				} catch (const boost::archive::archive_exception& e) {
+					sf::err() << e.code << " " << e.what();
+				}
+				
 				profileFile.close();
 			}
 		}

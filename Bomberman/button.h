@@ -11,13 +11,13 @@ namespace UI {
 		friend class UIFactory;
 	private:
 		sf::Text m_text;
-		sf::RectangleShape m_shape;
 		sf::Color m_stdTextColor;
 		sf::Color m_focusTextColor;
 		sf::Color m_stdFillColor;
 		sf::Color m_focusFillColor;
 		sf::Color m_stdOutlineColor;
 		sf::Color m_focusOutlineColor;
+		sf::RectangleShape m_shape;
 		unsigned int m_width;
 		unsigned int m_height;
 

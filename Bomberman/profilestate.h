@@ -16,13 +16,13 @@ namespace States {
 		};
 		Options::Loader& m_profileLoader;
 		ProfileState::SubState m_state;
+		unsigned int m_currentPage;
 		sf::RenderTexture m_newProfileTexture;
 		sf::RenderTexture m_focusedProfileTexture;
 		EditTextptr m_newProfileEdit;
 		States::UIObjects m_newProfileUIObjects;
 		States::UIObjects m_focusedProfileUiObjects;
 		States::UIObjects m_labelProfileList;
-		unsigned int m_currentPage;
 		std::string m_focusedProfileName;
 		sf::Sprite m_offSprite;
 

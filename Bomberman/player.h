@@ -23,15 +23,15 @@ namespace DataModel {
 		}
 
 		unsigned int m_bombLevel; //Fire level of bombs
-		std::vector<Utils::Timer> m_bombsTimer; //Timer for the reloads of bomb
-		unsigned int m_currentBombQty; //Current amount of bomb placed
-		unsigned int m_id; //Player id
-		unsigned int m_lifes; //Amount of life
+		Utils::Timer m_moveTimer; //Timer for movement to not got as fast as speed of light
 		unsigned int m_maxBomb; //Max amount of bombs
-		Utils::Timer m_moveTimer, //Timer for movement to not got as fast as speed of light
-					 m_bombPlaceTimer; //Timer to for bomb placement between two placements
+		unsigned int m_currentBombQty; //Current amount of bomb placed
+		Utils::Timer m_bombPlaceTimer; //Timer to for bomb placement between two placements
+		std::vector<Utils::Timer> m_bombsTimer; //Timer for the reloads of bomb
+		unsigned int m_lifes; //Amount of life
 		boost::scoped_ptr<DataModel::AIStrategie> m_strategie;
-
+		unsigned int m_id; //Player id
+		
 		void removeBomb();
 	public:
 		static const unsigned char MAX_BOMB_LEVEL;
