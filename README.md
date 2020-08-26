@@ -33,14 +33,10 @@ Known Bugs:
 * The AIs and player can walk over bombs
 
 What does the repo comes with:
-* Visual Studio 2010 Solution
-* SFML 2.0 RC binaries(both DLL and libs) for VS 2010
-* Boost 1.53 binaries for VS 2010
+* A CMakeLists.txt to generate a solution
+* Requires SFML 2.5
+* Requires lib cereal
 
-What may or may not be done:
-* Convert to CMake
-* Update SFML Version
-* Removal of Boost and replacing with equivalent
 
 Gameplay\
 ![](https://i.imgur.com/322GcJi.png)\
