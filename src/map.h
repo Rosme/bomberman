@@ -52,6 +52,10 @@ namespace DataModel {
 				}
 			}
 			ar(m_name);
+			m_player1 = Player{};
+			m_player2 = Player{};
+			m_player3 = Player{};
+			m_player4 =	Player{};
 			ar(m_player1);
 			ar(m_player2);
 			ar(m_player3);
