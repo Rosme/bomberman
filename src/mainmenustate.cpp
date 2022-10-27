@@ -39,6 +39,7 @@ namespace States {
 	}
 
 	void MainMenu::update(float delta) {
+        UNUSED(delta);
 	}
 
 	void MainMenu::handleEvents(sf::Event& event) {
@@ -63,6 +64,8 @@ namespace States {
 			case sf::Keyboard::P:
 				changeGameState(States::Profile);
 				break;
+            default:
+                break;
 			}
 		}
 		if(event.type == sf::Event::MouseMoved) {

@@ -59,7 +59,7 @@ namespace DataModel {
 		void setId(unsigned int id); //My number?
 		void setPosition(sf::Vector2i position); //Where am i?
 		void setStrategie(AIStrategie* strategie = nullptr); //What do I do?
-		void update(DataModel::Map& map); //Update to know what to do
+		void updateMap(DataModel::Map& map); //Update to know what to do
 	};
 
 }

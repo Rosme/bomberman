@@ -48,6 +48,8 @@ namespace States {
 				case sf::Keyboard::R:
 					loadRandomMap();
 					break;
+                default:
+                    break;
 				}
 			}
 
@@ -169,7 +171,7 @@ namespace States {
 		/* Header Setup */
 		m_headerSprite.setTexture(m_headerTexture.getTexture());
 
-		auto& ressources = gameWindow.getRessourcesManager();
+		auto ressources = gameWindow.getRessourcesManager();
 
 		sf::Texture& playerTexture = ressources->getTexture("players");
 		sf::Sprite player1(playerTexture);
@@ -238,6 +240,7 @@ namespace States {
 	}
 
 	void PlayingState::update(float delta) {
+        UNUSED(delta);
 		if(!m_paused) {
 			if(m_map.getPlayer(0).isDead()) {
 				m_firstGame = true;
@@ -411,7 +414,7 @@ namespace States {
 			maxLeft = ((startPosition.x - level) < 0) ? 0 : startPosition.x - level,
 			maxRight = ((startPosition.x + level) > 27) ? 27 : startPosition.x + level;
 
-		auto& ressources = m_gameWindow.getRessourcesManager();
+		auto ressources = m_gameWindow.getRessourcesManager();
 		m_fires.push_back(Ressources::makeFire(ressources->getTexture("fire"), sf::IntRect(0, 0, 32, 32), startPosition));
 
 		std::vector<DataModel::Player*> players;

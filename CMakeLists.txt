@@ -14,7 +14,7 @@ else()
     add_compile_options(-Wall -Wextra -pedantic -Werror)
 endif()
 
-include_directories(SYSTEM ${CMAKE_PREFIX_PATH}/cereal/include)
+include_directories(SYSTEM ${PROJECT_SOURCE_DIR}/libcereal/include)
 
 file(GLOB SRC CONFIGURE_DEPENDS 
         ${PROJECT_SOURCE_DIR}/src/*.cpp

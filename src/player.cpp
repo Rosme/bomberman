@@ -137,7 +137,7 @@ namespace DataModel {
 		m_strategie.reset(strategie);
 	}
 
-	void Player::update(DataModel::Map& map) {
+	void Player::updateMap(DataModel::Map& map) {
 		if(m_currentBombQty > 0) {
 			for(unsigned int i = 0; i < m_bombsTimer.size(); ++i) {
 				if(m_bombsTimer[i].isExpired()) {

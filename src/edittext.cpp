@@ -130,8 +130,8 @@ namespace UI {
 		if(m_filter == EditText::None)
 			return true;
 		if(m_filter == EditText::AlphaNum) {
-			if(key >= sf::Keyboard::A && key <= sf::Keyboard::Num9 || 
-				key >= sf::Keyboard::Numpad0 && key <= sf::Keyboard::Numpad9)
+            if((key >= sf::Keyboard::A && key <= sf::Keyboard::Num9) ||
+				(key >= sf::Keyboard::Numpad0 && key <= sf::Keyboard::Numpad9))
 				return true;
 		}
 		return false;

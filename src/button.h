@@ -8,7 +8,6 @@ class UIFactory;
 namespace UI {
 
 	class Button : public UI::Object {
-		friend class UIFactory;
 	private:
 		sf::Text m_text;
 		sf::Color m_stdTextColor;
@@ -21,13 +20,14 @@ namespace UI {
 		unsigned int m_width;
 		unsigned int m_height;
 
-		/* Ctor */
-		Button(const std::string& text, const sf::Font& font, float x, float y, 
-			const sf::Color stdTextColor = sf::Color(), 
-			const sf::Color stdFillColor = sf::Color(), 
-			const sf::Color stdOutlineColor = sf::Color(),
-			const unsigned int textSize = 30);
 	public:
+        /* Ctor */
+        Button(const std::string& text, const sf::Font& font, float x, float y,
+            const sf::Color stdTextColor = sf::Color(),
+            const sf::Color stdFillColor = sf::Color(),
+            const sf::Color stdOutlineColor = sf::Color(),
+            const unsigned int textSize = 30);
+        
 		/* Virtual Inheritance, override */
 		void draw(sf::RenderTexture& renderTexture); //Draw the button
 		sf::FloatRect getBoundings() const; //Get the bouding of the button

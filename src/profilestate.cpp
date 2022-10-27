@@ -58,7 +58,7 @@ namespace States {
 	}
 
 	void ProfileState::update(float delta) {
-
+        UNUSED(delta);
 	}
 
 	void ProfileState::handleEvents(sf::Event& event) {

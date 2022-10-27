@@ -5,6 +5,8 @@ namespace DataModel {
 
 	const unsigned int AIStrategie::DECISION_LIMIT = 350;
 
-	AIStrategie::AIStrategie() {} 
+	AIStrategie::AIStrategie() {}
+
+    AIStrategie::~AIStrategie() {}
 
 }

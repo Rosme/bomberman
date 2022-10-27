@@ -1,6 +1,7 @@
 
 #include "firstgamestate.h"
 #include "gamewindow.h"
+#include "utils.h"
 
 namespace States {
 
@@ -22,7 +23,9 @@ namespace States {
 		addUIObjects(continueButton);
 	}
 
-	void FirstGameState::update(float delta) {}
+	void FirstGameState::update(float delta) {
+        UNUSED(delta);
+    }
 
 	void FirstGameState::handleEvents(sf::Event& event) {
 		if(event.type == sf::Event::MouseMoved) {

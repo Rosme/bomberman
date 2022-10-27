@@ -27,7 +27,9 @@ namespace States {
 		}
 	}
 
-	void ScoreState::update(float delta) {}
+	void ScoreState::update(float delta) {
+        UNUSED(delta);
+    }
 
 	void ScoreState::handleEvents(sf::Event& event) {
 		if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {

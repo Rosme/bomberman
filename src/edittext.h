@@ -10,7 +10,6 @@ class UIFactory;
 namespace UI {
 
 	class EditText : public UI::Object {
-		friend class UIFactory;
 	public:
 		enum KeyFilter {
 			None,
@@ -27,13 +26,12 @@ namespace UI {
 		KeyFilter m_filter;
 		std::function<void(sf::Keyboard::Key)> m_textSignal;
 
-		/* Ctor */
-		EditText(float x, float y, const sf::Font& font, const sf::Color color, unsigned int size = 30);
-
 		/* Methods */
 		bool applyFilter(sf::Keyboard::Key key); //Apply the filter on the key
 		void updateText(sf::Keyboard::Key key); //Update the text value from the key
 	public:
+        /* Ctor */
+        EditText(float x, float y, const sf::Font& font, const sf::Color color, unsigned int size = 30);
 
 		/* Virtual override */
 		void draw(sf::RenderTexture& renderTexture); //Draw the text edit

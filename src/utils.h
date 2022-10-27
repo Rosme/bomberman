@@ -4,6 +4,8 @@
 #include <string>
 #include <SFML/Window.hpp>
 
+#define UNUSED(x) (void)(x)
+
 namespace Utils {
 
 	/**

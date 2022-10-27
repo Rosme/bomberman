@@ -135,7 +135,7 @@ namespace DataModel {
 
 		for(unsigned int i = 0; i < m_players.size(); ++i) {
 			if(!m_players[i]->isDead()) {
-				m_players[i]->update(*this);
+				m_players[i]->updateMap(*this);
 			}
 		}
 	}
@@ -152,6 +152,8 @@ namespace DataModel {
 		case Bomb::Blue:
 			y= 3;
 			break;
+        default:
+            break;
 		}
 		m_bombs.push_back(DataModel::BombPtr(new DataModel::Bomb(m_ressources->getTexture("bombs"), 
 																 sf::IntRect(2*32, y*32, 32, 32), 
@@ -233,11 +235,11 @@ namespace DataModel {
 
 		//TODO DOUBLE CHECK
 		for(int i = nodePos.first-1; i <= nodePos.first+1; ++i) {
-			if(i < 0 || i > m_array.size()-1) //Out of bounds
+			if(i < 0 || i > static_cast<int>(m_array.size()-1)) //Out of bounds
 				continue;
 
 			for(int j = nodePos.second-1; j <= nodePos.second+1; ++j) {
-				if(j < 0 || j > m_array[i].size() -1) //Out of bounds
+				if(j < 0 || j > static_cast<int>(m_array[i].size()-1)) //Out of bounds
 					continue;
 				if(i == nodePos.first && j == nodePos.second) //Current node
 					continue;

@@ -102,6 +102,7 @@ namespace States {
 	}
 
 	void OptionState::update(float delta) {
+        UNUSED(delta);
 	}
 
 	void OptionState::handleEvents(sf::Event& event) {

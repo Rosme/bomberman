@@ -23,6 +23,7 @@ namespace DataModel {
 		
 	public:
 		AIStrategie();
+        virtual ~AIStrategie();
 
 		virtual void update(DataModel::Map& map, DataModel::Player& owner) = 0;
 	};

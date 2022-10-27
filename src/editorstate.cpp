@@ -1,6 +1,7 @@
 #include "editorstate.h"
 #include "gamewindow.h"
 #include "tile.h"
+#include "utils.h"
 
 namespace States {
 
@@ -124,6 +125,7 @@ namespace States {
 	}
 
 	void EditorState::update(float delta) {
+        UNUSED(delta);
 	}
 
 	void EditorState::handleEvents(sf::Event& event) {
@@ -280,6 +282,8 @@ namespace States {
 			case sf::Keyboard::N:
 				m_map.resetMap();
 				break;
+            default:
+                break;
 			}
 		}
 

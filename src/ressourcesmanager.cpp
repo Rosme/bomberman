@@ -18,7 +18,7 @@ namespace Ressources {
 
 				for(auto it = bfs::directory_iterator(tPath), end = bfs::directory_iterator(); it != end; ++it) {
 					m_texturesMap[(*it).path().stem().string()].loadFromFile((*it).path().string());
-					sf::Image& img = m_texturesMap[(*it).path().stem().string()].copyToImage();
+					auto img = m_texturesMap[(*it).path().stem().string()].copyToImage();
 					img.createMaskFromColor(sf::Color(255,0 ,255));
 					m_texturesMap[(*it).path().stem().string()].loadFromImage(img);
 				}
